@@ -2,7 +2,7 @@ import Growl from '../services/growl';
 
 export default {
   name: 'growl',
-  initialize: function(container, app) {
+  initialize: function(app) {
     Growl.reopenClass({
       container: container
     });
