@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Object.extend({
+export default Ember.Service.extend({
   notifications: Ember.A(),
   error: function(context, opts) {
     opts = opts || {};
