@@ -20,6 +20,8 @@ Note: `growl.notifications` references the service injected on the application
 
 controller.
 
+### Ember 1.x
+
 The `growl` service is injected into all routes and controllers. This means
 you can display messages like so: `this.growl.error('An error message');`
 
@@ -30,6 +32,21 @@ Message types:
     this.growl.info('Message', [options]);
 
     this.growl.alert('Message', [options]);
+
+### Ember 2.x
+
+Inject the `growl` service into your route / controller / component normally:
+
+```
+export default Ember.Component.extend({
+  growl: Ember.inject.service(),
+
+  actions: {
+    popAlert() {
+      this.get('growl').error('Error message!');
+    }
+  }  
+});
 
 ## Options
 
